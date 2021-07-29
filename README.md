@@ -8,7 +8,7 @@ When run, the screen shows a yellow line on the top and a cyan line on the botto
 
 <img src="M5-LPFs.jpg" width=400>
 
-Pushing Button A makes the input signal $u$ to be $u$ = 1.0. In other words, you can make a unit step by pushing Button A. The pink and cyan lines on the bottom shows the responses of the first- and second-order low-pass filters, respectively.
+Pushing Button A makes the input signal to jump from zero to unity. In other words, you can make a unit step by pushing Button A. The pink and cyan lines on the bottom shows the responses of the first- and second-order low-pass filters, respectively.
 
 ## Implementation
 The low-pass filters are implemented as C++ classes.
