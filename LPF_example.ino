@@ -24,7 +24,7 @@ void IRAM_ATTR onTimer();
 void taskPeriodical(void *pvParameters);
 void plotGraph(float u, float y1, float y2);
 
-// Define LPF instances, first-order and second order
+// Define LPF instances, first- and second-order
 FirstOrderLPF lpf1(T_SAMPLE_US / 1e6, OMEGA_N1);
 SecondOrderLPF lpf2(T_SAMPLE_US / 1e6, ZETA2, OMEGA_N2);
 
