@@ -1,5 +1,4 @@
-# LPF_example
-An M5Stack Arduino IDE example for simple digital low-pass filters
+# An M5Stack Arduino IDE example for simple digital low-pass filters
 
 ## Purpose
 This is my practice to implement a constant-period timer interruptiun as well as IIR digital filters.
