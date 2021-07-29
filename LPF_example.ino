@@ -74,6 +74,8 @@ void taskPeriodical(void *pvParameters) {
   float u, y1, y2;
   while (true) {
     xTaskNotifyWait(0, 0, &ulNotifiedValue, portMAX_DELAY);
+
+    // Create input unit step signal based on Button A
     M5.update();
     if (M5.BtnA.read()) {
       u = 1.0;
@@ -81,9 +83,11 @@ void taskPeriodical(void *pvParameters) {
       u = 0.0;
     }
 
-    // Apply LPFs, first-order and second-order
+    // Apply LPFs, first- and second-order
     y1 = lpf1.apply(u);
     y2 = lpf2.apply(u);
+
+    // Plot graphs on LCD
     plotGraph(u, y1, y2);
   }
 }
@@ -91,7 +95,7 @@ void taskPeriodical(void *pvParameters) {
 // A function to plot graph on LCD
 void plotGraph(float u, float y1, float y2) {
 
-  // Variables for LCD control
+  // Variables for graph control
   static int x = 0;
   static int x_old = 0;
   static int yu = 0;
