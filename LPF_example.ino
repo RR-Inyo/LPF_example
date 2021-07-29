@@ -15,7 +15,7 @@ const float OMEGA_N1 = 5;
 const float ZETA2 = 0.2;
 const float OMEGA_N2 = 12;
 
-// Handelrs for task and timer
+// Handlers for task and timer
 TaskHandle_t taskHandle;
 hw_timer_t *timer = NULL;
 
